@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Zealand Heathen Council</title>
+
+    <!-- SEO & SEARCH ENGINE OPTIMISATION -->
+    <meta name="description" content="The New Zealand Heathen Council: Promoting historical Old Norse traditions and Heathenry in the Southern Hemisphere.">
+    <meta name="keywords" content="Heathenry NZ, Norse Paganism New Zealand, Asatru NZ, NZ Heathen Council, Otago Gothi">
+    <meta name="author" content="New Zealand Heathen Council">
+
+    <!-- JSON-LD Structured Data: Helps Google understand this is a Council/Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ReligiousOrganization",
+      "name": "New Zealand Heathen Council",
+      "url": "https://your-website-url.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "NZ",
+        "addressRegion": "Otago"
+      }
+    }
+    </script>
+
+    <style>
+        /* HISTORICAL TYPOGRAPHY */
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+        :root {
+            --bg-color: #121212; 
+            --text-main: #e0e0e0;
+            --silver-accent: #C0C0C0; /* Primary Metal */
+            --silver-dim: #70757a;
+            --blood-red: #8a0303;
+            --wood-dark: #1f1b18;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at center, var(--wood-dark) 0%, var(--bg-color) 100%);
+            color: var(--text-main);
+            font-family: 'Lora', serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, nav a {
+            font-family: 'Cinzel Decorative', serif;
+            color: var(--silver-accent);
+            font-weight: normal;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+            border-bottom: 2px solid var(--silver-accent);
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+            background-color: var(--wood-dark);
+            border-bottom: 1px solid var(--silver-dim);
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--silver-accent);
+            text-decoration: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #ffffff;
+            text-shadow: 0 0 8px var(--silver-accent);
+        }
+
+        /* MAIN CONTENT AREA */
+        main {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            min-height: 50vh;
+        }
+
+        .page-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .rune-divider {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--silver-dim);
+            margin: 2rem 0;
+            letter-spacing: 15px;
+        }
+
+        /* COUNCIL MEMBER GRID STYLING */
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .member-card {
+            background-color: rgba(31, 27, 24, 0.8);
+            border-top: 3px solid var(--silver-accent);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-image {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border: 2px solid var(--silver-dim);
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            background-color: #000;
+        }
+
+        .member-card h3 {
+            margin: 0.5rem 0;
+            color: var(--silver-accent);
+            border-bottom: 1px solid var(--blood-red);
+            display: inline-block;
+        }
+
+        .member-title {
+            display: block;
+            font-style: italic;
+            color: var(--silver-dim);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .about-text {
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        /* CONTACT FORM STYLING */
+        .contact-form-container {
+            background-color: rgba(31, 27, 24, 0.8);
+            border-left: 4px solid var(--silver-accent);
+            padding: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-family: 'Cinzel Decorative', serif;
+            color: var(--silver-accent);
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: #1a1a1a;
+            border: 1px solid var(--silver-dim);
+            color: white;
+            font-family: 'Lora', serif;
+            box-sizing: border-box;
+        }
+
+        .submit-btn {
+            background: transparent;
+            color: var(--silver-accent);
+            border: 2px solid var(--silver-accent);
+            padding: 1rem 2rem;
+            font-family: 'Cinzel Decorative', serif;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        .submit-btn:hover { background: var(--silver-accent); color: black; }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--silver-dim);
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: var(--silver-dim);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>New Zealand Heathen Council</h1>
+        <p>Honouring the Old Gods in the Southern Lands</p>
+    </header>
+
+    <nav>
+        <a onclick="showSection('welcome')" id="nav-welcome" class="active">Welcome</a>
+        <a onclick="showSection('about')" id="nav-about">About Us</a>
+        <a onclick="showSection('members')" id="nav-members">Council</a>
+        <a onclick="showSection('calendar')" id="nav-calendar">Calendar</a>
+        <a onclick="showSection('resources')" id="nav-resources">Resources</a>
+        <a onclick="showSection('contact')" id="nav-contact">Contact</a>
+    </nav>
+
+    <main>
+        <!-- WELCOME SECTION (ORIGINAL DESIGN) -->
+        <section id="welcome" class="page-section active">
+            <h2>Hail and Welcome</h2>
+            <p>Welcome to the digital hall of the New Zealand Heathen Council. We are a network of kindreds, hearths, and solitary practitioners dedicated to the historical traditions, lore, and practices of old Norse heathenry.</p>
+            <p>Whether you are drawn to the wisdom of the High One, the strength of the Thunderer, or the deep roots of the World Tree, you will find fellowship and knowledge here.</p>
+            <div class="rune-divider">ᛟ ᚹ ᚫ</div>
+            <p style="text-align: center;"><em>"Cattle die, kindred die, Every man is mortal: But the good name never dies Of one who has done well."</em><br>- Hávamál</p>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="page-section">
+            <h2>Our Purpose</h2>
+            <p>The New Zealand Heathen Council exists to foster community, ensure the accurate sharing of historical lore, and provide a unified voice for practitioners operating under New Zealand law.</p>
+            <h3>Our Values</h3>
+            <ul>
+                <li><strong>Frith:</strong> Maintaining peace and strong bonds within our communities.</li>
+                <li><strong>Hospitality:</strong> Welcoming those who seek knowledge with an open mind.</li>
+                <li><strong>Historical Grounding:</strong> Rooting our rituals in primary sources.</li>
+            </ul>
+        </section>
+
+        <!-- COUNCIL MEMBERS SECTION (20 MEMBERS) -->
+        <section id="members" class="page-section">
+            <h2>The Council</h2>
+            <p>The following individuals represent the regional kindreds and spiritual leadership of the Council.</p>
+
+            <div class="members-grid">
+                
+                <!-- INSTRUCTIONS FOR MEMBERS: 
+                     1. To change an image: Replace the URL in 'src="...".
+                     2. To change names/titles: Edit the text inside <h3> and <span> tags.
+                     3. To change bio: Edit the text inside the <p class="about-text"> tag.
+                -->
+
+                <!-- Member 1 -->
+                <div class="member-card">
+                    <img src="Images/hjort.png" alt="Portrait of Hjortarvé Eikvarðr" class="member-image">
+                    <h3>Hjortarvé Eikvarðr</h3>
+                    <span class="member-title">Gothi of Otago</span>
+                    <p class="about-text">Dedicated to the preservation of Old Norse ritual and historical education within the Otago region.</p>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+2" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+3" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+4" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 5 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+5" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 6 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+6" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 7 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+7" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 8 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+8" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 9 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+9" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 10 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+10" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 11 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+11" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 12 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+12" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 13 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+13" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 14 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+14" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 15 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+15" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 16 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+16" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 17 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+17" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 18 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+18" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 19 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+19" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+                <!-- Member 20 -->
+                <div class="member-card">
+                    <img src="https://placehold.co/150x150/1f1b18/C0C0C0?text=Member+20" alt="Portrait" class="member-image">
+                    <h3>[Name]</h3>
+                    <span class="member-title">Regional Representative</span>
+                    <p class="about-text">Add a brief "About Me" here describing their role or background in the heathen community.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CALENDAR SECTION -->
+        <section id="calendar" class="page-section">
+            <h2>Upcoming Rites & Moots</h2>
+            <p>Our seasonal celebrations are inverted to align with the Southern Hemisphere tides.</p>
+            <p><strong>Yule (Midwinter):</strong> June 20th - 22nd</p>
+            <p><strong>Sigrblót (First Day of Summer):</strong> September 21st - 23rd</p>
+            <p><strong>Midsomar (Midsummer):</strong> December 20th - 22nd</p>
+            <p><strong>NorseWood Festival:</strong> Waitangi Weekend</p>
+            <p><strong>Winter Night (First Day of Winter):</strong> March 20th - 22nd</p>
+        </section>
+
+        <!-- RESOURCES SECTION -->
+        <section id="resources" class="page-section">
+            <h2>Lore & Law</h2>
+            <ul>
+                <li>The Poetic Edda</li>
+                <li>The Prose Edda</li>
+                <li>New Zealand Legal Celebrant Status for Heathenry</li>
+            </ul>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="page-section">
+            <h2>Contact the Council</h2>
+            <div class="contact-form-container">
+                <!-- FORMSPREE: Replace 'your-id-here' with your unique Formspree ID -->
+                <form action="https://formspree.io/f/your-id-here" method="POST">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Cast Word</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 New Zealand Heathen Council. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // NAVIGATION LOGIC
+        function showSection(sectionId) {
+            document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('nav a').forEach(l => l.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+            document.getElementById('nav-' + sectionId).classList.add('active');
+            window.scrollTo(0,0);
+        }
+    </script>
+</body>
+</html>
